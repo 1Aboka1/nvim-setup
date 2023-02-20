@@ -77,6 +77,13 @@ require('packer').startup(function(use)
 	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 	use "cdelledonne/vim-cmake"
 	use "rcarriga/nvim-notify"
+	use {
+	    'goolord/alpha-nvim',
+	    requires = { 'nvim-tree/nvim-web-devicons' },
+	    config = function ()
+		require'alpha'.setup(require'alpha.themes.startify'.config)
+	    end
+	}
 
 	if install_plugins then
 		require('packer').sync()
@@ -135,6 +142,7 @@ require('barbar-config')
 require('nvim-tree-config')
 require('markdown-preview-config')
 require('nvim-treesitter-config')
+require('coc-config')
 
 require('notify').setup({
     background_colour = "#000000",
