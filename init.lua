@@ -54,7 +54,6 @@ require('packer').startup(function(use)
 		},
 		tag = 'nightly' -- optional, updated every week. (see issue #1193)
 	}
-	-- use "glepnir/dashboard-nvim"
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		-- or                            , branch = '0.1.x',
@@ -69,10 +68,6 @@ require('packer').startup(function(use)
 
 	use 'nvim-treesitter/nvim-treesitter'
 	use 'rafcamlet/coc-nvim-lua'
-	-- use({
-	-- 	"iamcco/markdown-preview.nvim",
-	-- 	run = function() vim.fn["mkdp#util#install"]() end,
-	-- })
 
 	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 	use "cdelledonne/vim-cmake"
@@ -81,7 +76,7 @@ require('packer').startup(function(use)
 	    'goolord/alpha-nvim',
 	    requires = { 'nvim-tree/nvim-web-devicons' },
 	    config = function ()
-		require'alpha'.setup(require'alpha.themes.startify'.config)
+		require'alpha'.setup(require'alpha.themes.dashboard'.config)
 	    end
 	}
 

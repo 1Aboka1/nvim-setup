@@ -1,7 +1,0 @@
-{
-    "rust-analyzer.diagnostics.enable": true,
-    "rust-analyzer.inlayHints.chainingHints": true,
-    "rust-analyzer.inlayHints.typeHints": true,
-    "rust-analyzer.inlayHints.parameterHints": true,
-    "rust-analyzer.serverPath": "/home/aboka/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rust-analyzer"
-}
