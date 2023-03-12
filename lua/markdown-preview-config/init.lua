@@ -3,7 +3,7 @@ vim.g.mkdp_auto_close = 0
 vim.cmd(
 [[
 function OpenMarkdownPreview (url)
-  execute "silent ! firefox --new-window " . a:url
+    execute "silent ! firefox --new-window " . a:url
 endfunction
 ]]
 )
